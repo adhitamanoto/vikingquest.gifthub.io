@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congratulations!</title>
+  <link rel="stylesheet" href="winner.css">
+</head>
+<body>
+
+  <!-- Story Section -->
+  <div id="story-section">
+    <div class="story-content">
+      <h1>You Have Found your Destiny!</h1>
+      <p>There is a magic button that could spark your eyes</p>
+      <button id="close-story-btn">Take your reward</button>
+    </div>
+  </div>
+
+  <!-- Winner Container -->
+  <div class="winner-container" id="winner-container" style="display:none;">
+    <div id="present-display">
+      <img src="winner/present.png" id="present-image" alt="Present">
+    </div>
+    <p>There exist magic key that can spark your eyes. Ask and you shall find the magic Key</p>
+  </div>
+
+  <script src="game4.js"></script>
+  <script>
+    // Ensure no duplicate variable declarations
+    let whisperAudio = new Audio("winner/whisper.mp3"); // Initialize the whisper audio
+
+    // Story section related code
+    const closeStoryButton = document.getElementById("close-story-btn");
+    const winnerContainer = document.getElementById("winner-container");
+
+    // When the user clicks the "Close Story" button
+    closeStoryButton.addEventListener("click", () => {
+      // Hide the story section and show the winner container
+      document.getElementById("story-section").style.display = "none";  // Hide the story section
+      winnerContainer.style.display = "block"; // Show the winner container with the puzzle
+    });
+
+    // Handle keypress to switch present images and play the whisper.mp3 sound
+    document.addEventListener("keydown", (e) => {
+      if (e.key.toLowerCase() === "c") {
+        // Toggle present image
+        const currentImage = document.getElementById("present-image");
+        const currentSrc = currentImage.src.split('/').pop(); // Get the image file name only
+
+        if (currentSrc === "present.png") {
+          currentImage.src = "winner/gift.png"; // Switch to 'gift.png'
+        } else {
+          currentImage.src = "winner/present.png"; // Switch back to 'present.png'
+        }
+
+        // Play the whisper.mp3 sound
+        whisperAudio.play();
+      }
+    });
+  </script>
+
+</body>
+</html>

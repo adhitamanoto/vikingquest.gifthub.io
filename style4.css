@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 650px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #005bbb;
+}
+
+#story-section {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#story-section button {
+    padding: 10px 20px;
+    background-color: #005bbb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#puzzle-container {
+    width: 626px;
+    height: 626px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid #000;
+}
+
+.puzzle-piece {
+    width: 208.67px;
+    height: 208.67px;
+    background-size: 626px 626px;
+    cursor: grab;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+}
+
+#winner-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    border: 2px solid #333;
+    padding: 20px;
+    z-index: 100;
+}
+
+#winner-popup.hidden {
+    display: none;
+}
+
+#winner-popup img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#winner-popup h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #005bbb;
+}
+
+#winner-popup p {
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 650px) {
+    #puzzle-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .puzzle-piece {
+        width: 30%;
+        height: auto;
+    }
+}

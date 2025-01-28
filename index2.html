@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 2 - Alien Letter Guessing Game</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <!-- Story Section -->
+  <div id="story-section">
+    <h1>Chapter 2: The Temple of the Gods</h1>
+    <p>
+      The Viking triumphed over nature’s relentless trial, emerging stronger and more determined than ever. Yet the victory was short-lived, for the next challenge lay ahead, and it promised to be far more harrowing.
+
+Before the Viking loomed a towering temple, ancient and foreboding. Its walls were adorned with carvings of forgotten stories, etched in a language older than time itself. As the Viking stepped inside, the entrance sealed shut with a thunderous echo, leaving only silence and the flicker of dim, otherworldly light.
+
+Trapped.
+
+The Viking's sharp instincts scanned the chamber. At its heart lay a grand stone tablet, covered in the cryptic symbols of the gods. Surrounding it were countless pillars inscribed with similar markings, their arrangements seemingly random at first glance. But the Viking knew better—this was no chaos. It was a puzzle, and its solution was the only key to freedom.
+
+If the first trial had tested the Viking’s strength and courage, this one demanded an entirely different skill: intelligence.
+
+The Viking crouched before the tablet, tracing the grooves of the symbols with calloused fingers. Each glyph felt like a riddle, an enigma whispered by the divine. Patterns began to emerge—some symbols mirrored those on the surrounding pillars, while others seemed deliberately unique. The Viking’s mind raced, piecing together fragments of meaning, searching for the logic buried beneath the ancient mystery. 
+    </p>
+    <button id="close-story">Decipher the code</button>
+  </div>
+
+  <!-- Game Container -->
+  <div id="game-container" style="display: none;">
+    <!-- Cheat sheet at the top -->
+    <div id="alien-letters">
+      <h3>The God's Dicitionary</h3>
+      <div id="reference-grid">
+        <!-- Dynamically generated alien letter cheat sheet -->
+      </div>
+    </div>
+
+    <!-- Game area -->
+    <div id="game-area">
+      <h1>Decipher the language of the Gods</h1>
+      <p id="timer">Time Left: 1:30</p>
+      <div id="word-container">
+        <!-- Alien letter images and input boxes dynamically generated -->
+        <div id="alien-pngs"></div>
+        <div id="input-boxes"></div>
+      </div>
+      <button id="submit-button">Submit Guess</button>
+      <p id="feedback"></p>
+    </div>
+  </div>
+
+  <!-- Background music -->
+  <audio id="background-music" src="./Alian/bastard.mp3" loop></audio>
+
+  <script src="game2.js"></script>
+</body>
+</html>

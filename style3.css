@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  .timer {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #maze-container {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #333;
+    background-color: #fff;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+  }
+  
+  .wall {
+    background-color: #333;
+  }
+  
+  .path {
+    background-color: #fff;
+  }
+  
+  /* Player with PNG image */
+  .player {
+    width: 30px; /* Match your player.png size */
+    height: 30px;
+    background-image: url('maze/player.png');
+    background-size: cover;
+    position: absolute;
+    transition: all 0.1s ease;
+    z-index: 2;
+  }
+  
+  /* Goal with PNG image */
+  .exit {
+    width: 30px;
+    height: 30px;
+    background-image: url('maze/goal.png');
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Storyboard styles */
+  .story-board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  

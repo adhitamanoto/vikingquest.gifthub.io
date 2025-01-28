@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="story-section">
+      <h2>The Viking’s Destiny</h2>
+      <button id="toggle-story">Read Story</button>
+      <div id="story-text" style="display: none;">
+        <p>
+            There is a legend whispered through the ages—a tale of a sacred treasure left behind by the ancient heroes. A treasure so powerful that it defies all comprehension, said to grant its bearer the gift of immortality. But this treasure is not protected by steel or warriors. Instead, it is guarded by the wild and untamed forces of nature itself.
+
+            Among those who dare to dream of such glory, there was a Viking unlike any other. This warrior was a force of unrelenting determination, undefeated in every battle fought, with countless lands conquered and songs sung in their honor. Yet, victory had grown hollow, and the Viking's soul ached for a challenge greater than any mortal foe could provide.
+            
+            And so, they set their sights on the treasure of legend—a quest so perilous that no one else dared to even attempt it. For where others saw doom, the Viking saw destiny.
+            
+        </p>
+        <input type="text" id="character-name" placeholder="Enter your character's name" />
+        <button id="start-game">Start Game</button>
+      </div>
+    </div>
+    <div id="game-area">
+      <!-- Game canvas will be here -->
+      <div id="game-area">
+        <canvas id="game-canvas" width="800" height="400"></canvas>
+      </div>
+      
+    </div>
+  </div>
+  <script src="story.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
