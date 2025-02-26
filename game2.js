@@ -56,7 +56,7 @@ function startNewRound() {
 
   const words = [
     "sukablyat", "kneegrow", "postaltwo", "feet", "anjing",
-    "strongwoman", "Goran", "Yavparyadki", "tripoloski", "borje",
+    "strongwoman", "Yavparyadki", "tripoloski", "borje",
     "iamracist", "javlafitta", "fodelsedag", "iwannabeyourvacuumcleaner", "lemongrab"
   ];
 
